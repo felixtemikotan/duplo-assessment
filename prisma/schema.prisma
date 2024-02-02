@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://decagon:GskuvimR@1127@localhost:5432/duplo?schema=public"
+  url      = "postgres://default:aEZ7hAMBVLW2@ep-young-field-a4sxtk9e.us-east-1.postgres.vercel-storage.com:5432/verceldb"
 }
 
 model BlogPost {

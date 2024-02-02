@@ -25,11 +25,3 @@ app.listen({ port: 3000 })
   routes.forEach((route:any, index:any) => {
     app.route(route)
 })
-
-function hungry() { eatFruits();
-  console.log("I am hungry."); 
-  }
-  function eatFruits() { console.log("I'm eating fruits"); 
-  } 
-  hungry();
-  
