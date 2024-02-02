@@ -6,6 +6,11 @@ const routes = [{
     },
     {
         method: 'GET',
+        url: '/',
+        handler: blogController.getAllPosts
+    },
+    {
+        method: 'GET',
         url: '/api/get-single-blog-post/:id',
         handler: blogController.getSinglePost
     },
