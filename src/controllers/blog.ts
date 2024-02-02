@@ -18,10 +18,10 @@ exports.addNewPost = async (req: { body: any; }, reply: any) => {
                 message:error.details[0].message
             }
         }
-    const newpost = await prisma.BlogPost.create({
+    const newpost = await prisma.blogPost.create({
         data: req.body
     })
-    const allBlogPost = await prisma.BlogPost.findMany({
+    const allBlogPost = await prisma.blogPost.findMany({
         orderBy: [
           {
             dateUpdated: 'desc'
@@ -37,7 +37,7 @@ exports.addNewPost = async (req: { body: any; }, reply: any) => {
 
 exports.getAllPosts = async (req: any, reply: any) => {     
     try{
-        const allBlogPost = await prisma.BlogPost.findMany({
+        const allBlogPost = await prisma.blogPost.findMany({
             orderBy: [
               {
                 dateUpdated: 'desc'
@@ -62,7 +62,7 @@ exports.getSinglePost = async (req: { params: { id: any; }; }, reply: any) => {
             message:error.details[0].message
         }
     }
-    let post = await  await prisma.BlogPost.findUnique({
+    let post = await  await prisma.blogPost.findUnique({
         where: {
             id: String(id)
         }
@@ -85,13 +85,13 @@ exports.updatePost = async (req: { params: { id: any; }; body: any; }, reply: an
             message:error.details[0].message
         }
     }
-    let result = await prisma.BlogPost.update({
+    let result = await prisma.blogPost.update({
         where: {
             id: String(id)
         },
         data: req.body
     })
-    const allBlogPost = await prisma.BlogPost.findMany({
+    const allBlogPost = await prisma.blogPost.findMany({
         orderBy: [
           {
             dateUpdated: 'desc'
@@ -118,12 +118,12 @@ exports.deletePost = async (req: { params: { id: any; }; }, reply: any) => {
             }
         }
    
-    await prisma.BlogPost.delete({
+    await prisma.blogPost.delete({
         where: {
             id: String(id)
         }
     })
-    const allBlogPost = await prisma.BlogPost.findMany({
+    const allBlogPost = await prisma.blogPost.findMany({
         orderBy: [
           {
             dateUpdated: 'desc'
