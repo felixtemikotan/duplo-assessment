@@ -1,9 +1,5 @@
 
-import fastify,{ 
-  FastifyInstance, 
-  FastifyPluginOptions, 
-  FastifyPluginAsync 
-} from 'fastify';
+import fastify from 'fastify';
 import { Prisma,PrismaClient } from '@prisma/client';
 import 'dotenv/config';
 const Port = process.env.PORT || 3000;
