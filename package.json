@@ -6,13 +6,18 @@
   "scripts": {
     "compile": "tsc -w",
     "start": "nodemon ./dist/app.js",
-    "build": "tsc",
-    "lint": "npx eslint --ext .ts src/",
-    "lint:tests": "npx eslint --ext .ts spec/",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist",
     "dev": "nodemon ./dist/app.js",
     "test": "jest"
   },
   "author": "Felix Temikotan",
+  "pre-commit": [
+    "ts.check",
+    "build",
+    "add-build"
+  ],
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^5.9.1",
@@ -26,7 +31,9 @@
     "joi": "^17.12.1",
     "morgan": "^1.10.0",
     "nodemon": "^3.0.3",
+    "pre-commit": "^1.2.2",
     "prisma": "^5.9.1",
+    "rimraf": "^5.0.5",
     "supertest": "^6.3.4",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
