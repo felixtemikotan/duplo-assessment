@@ -15,12 +15,12 @@ const routes = [{
         handler: blogController.addNewPost,
     },
     {
-        method: 'PUT',
+        method: 'POST',
         url: '/api/update-blog-post/:id',
         handler: blogController.updatePost
     },
     {
-        method: 'DELETE',
+        method: 'GET',
         url: '/api/delete-blog-post/:id',
         handler: blogController.deletePost
     }
