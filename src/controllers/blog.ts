@@ -2,7 +2,6 @@
 import fastify from 'fastify';
 import { Prisma,PrismaClient } from '@prisma/client';
 import 'dotenv/config';
-import { RedwoodError } from '@redwoodjs/api';
 import {addPostValidator, updatePostValidator, paramsValidator, options} from '../util/utils'
 
 const prisma = new PrismaClient();

@@ -6,7 +6,6 @@ import fastify,{
 } from 'fastify';
 import { Prisma,PrismaClient } from '@prisma/client';
 import 'dotenv/config';
-import { RedwoodError } from '@redwoodjs/api'
 const Port = process.env.PORT || 3000;
 const routes = require("./routes/blog");
 
