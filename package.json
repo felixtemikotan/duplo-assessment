@@ -4,13 +4,15 @@
   "description": "This assessment comes in two (2) parts and is a detailed simulation of what your work at Duplo will entail if hired.",
   "main": "index.js",
   "scripts": {
-    "compile": "tsc -w",
-    "start": "nodemon ./dist/app.js",
-    "build": "rimraf dist && tsc",
-    "ts.check": "tsc --project tsconfig.json",
-    "add-build": "git add dist",
-    "dev": "nodemon ./dist/app.js",
-    "test": "jest"
+  "compile": "tsc -w",
+  "start": "nodemon ./dist/app.js",
+  "build": "tsc",
+  "postinstall": "tsc",
+  "lint": "npx eslint --ext .ts src/",
+  "lint:tests": "npx eslint --ext .ts spec/",
+  "dev":  "nodemon ./dist/app.js",
+  "test": "jest",
+  "deploy": "git add . && git commit -m Heroku && git push heroku main"
   },
   "author": "Felix Temikotan",
   "pre-commit": [
