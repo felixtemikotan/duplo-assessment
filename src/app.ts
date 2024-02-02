@@ -26,22 +26,3 @@ app.listen({ port: 3000 })
     app.route(route)
 })
 
-
-// const main = async () => {     
-//   try{
-//       const createBlogPost = await prisma.BlogPost.create({
-//       data: {
-//           title: 'Other ORMS II',
-//           content: 'Other ORMS',
-//           author: "Felix Temikotan",
-//       },
-//       })
-//       console.log("createBlogPost",createBlogPost)
-//       const allBlogPost = await prisma.BlogPost.findMany()
-//       return allBlogPost
-//   }catch(e:any){
-//       return e instanceof Prisma.PrismaClientKnownRequestError  && e.code === 'P2002' ? { status: 400, message: "Blog title already exist", column: e?.meta?.target, error: "duplicate exist" } : { status: 500, error:e?.message}
-//   }
-// }
-
-// main().then((data:any)=>console.log(data)).catch((err:any)=>console.log(err))
