@@ -6,13 +6,13 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const fastify_1 = __importDefault(require("fastify"));
 const client_1 = require("@prisma/client");
 require("dotenv/config");
-const Port = process.env.PORT || 3000;
+const Port = process.env.PORT || 8080;
 const routes = require("./routes/blog");
 const prisma = new client_1.PrismaClient();
 const app = (0, fastify_1.default)({
     logger: true
 });
-app.listen({ port: 3000 })
+app.listen({ port: 8080 })
     .then((address) => console.log(`server listening on ${address}`))
     .catch(err => {
     console.log('Error starting server:', err);
