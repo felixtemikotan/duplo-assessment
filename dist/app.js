@@ -12,7 +12,7 @@ const prisma = new client_1.PrismaClient();
 const app = (0, fastify_1.default)({
     logger: true
 });
-app.listen({ port: 3000 })
+app.listen({ port: 3000, host: '0.0.0.0' })
     .then((address) => console.log(`server listening on ${address}`))
     .catch(err => {
     console.log('Error starting server:', err);
