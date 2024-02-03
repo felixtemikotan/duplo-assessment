@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "compile": "tsc -w",
-    "start": "nodemon ./dist/app.js",
+    "start": "node ./dist/app.js",
     "build": "tsc",
     "postinstall": "tsc",
     "lint": "npx eslint --ext .ts src/",
@@ -30,25 +30,17 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.1",
     "fastify": "^4.26.0",
-    "fastify-plugin": "^4.5.1",
     "http": "^0.0.1-security",
     "jest": "^29.7.0",
-    "jet-validator": "^1.1.1",
     "joi": "^17.12.1",
-    "morgan": "^1.10.0",
     "nanoid": "^3.3.7",
     "nodemon": "^3.0.3",
     "pre-commit": "^1.2.2",
     "prisma": "^5.9.1",
-    "request": "^2.88.2",
-    "rimraf": "^5.0.5",
-    "supertest": "^6.3.4",
-    "tap": "^18.7.0",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.3.3",
-    "vercel": "^33.4.1",
-    "vitest": "^1.2.2"
+    "vercel": "^33.4.1"
   }
 }
